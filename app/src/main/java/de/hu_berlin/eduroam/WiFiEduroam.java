@@ -85,12 +85,10 @@ public class WiFiEduroam extends Activity {
     private EditText password;
     private String ca;
     private String ca_name = "tcom2ndgen";
-    private String subject_match = "-radius.cms.hu-berlin.de";
-    private String alt_subject_match = "DNS:srv1-radius.cms.hu-berlin.de;DNS:srv2-radius.cms.hu-berlin.de";
-    private String realm = "@wlan.hu-berlin.de";
+    private String subject_match = "-uft.edu.br";
+    private String alt_subject_match = "DNS:*.uft.edu.br;DNS:uft.edu.br";
+    private String realm = "@uft.edu.br";
     private List<String> ssids = Arrays.asList("eduroam", "eduroam_5GHz");
-    private List<String> valid_full_domains = Arrays.asList("physik.hu-berlin.de", "mathematik.hu-berlin.de", "informatik.hu-berlin.de");
-    private List<String> valid_short_domains = Arrays.asList("physik", "mathematik", "informatik");
     private Toast toast = null;
     private boolean display_lock_exists = false;
 
@@ -166,19 +164,7 @@ public class WiFiEduroam extends Activity {
     private String fix_username(String username) {
         if (!username.contains("@")) {
             // cms account without domain
-            return username + "@wlan.hu-berlin.de";
-        } else if (containsDomain(username, valid_full_domains)) {
-            // username contains old full external domain (physik, ...)
-            // => insert wlan subdomain
-            String[] parts = username.split("\\.hu-berlin\\.de");
-            return parts[0] + ".wlan.hu-berlin.de";
-        } else if (username.contains("@cms.hu-berlin.de")) {
-            // old full domain for CMS accounts; => replace
-            String[] parts = username.split("@");
-            return parts[0] + "@wlan.hu-berlin.de";
-        } else if (containsDomain(username, valid_short_domains)) {
-            // username contains short domain
-            return username + ".wlan.hu-berlin.de";
+            return username + "@uft.edu.br";
         } else {
             return username;
         }
@@ -268,7 +254,7 @@ public class WiFiEduroam extends Activity {
         configMap.put(INT_ANONYMOUS_IDENTITY, "anonymous" + realm);
         configMap.put(INT_EAP, "TTLS");
         configMap.put(INT_PHASE2, "auth=PAP");
-        configMap.put(INT_CA_CERT, INT_CA_PREFIX + ca_name);
+        //configMap.put(INT_CA_CERT, INT_CA_PREFIX + ca_name);
         configMap.put(INT_PASSWORD, password.getText().toString());
         configMap.put(INT_IDENTITY, fix_username(username.getText().toString().trim()));
 
