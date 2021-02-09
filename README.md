@@ -1,4 +1,4 @@
-HU Berlin eduroam
+eduroamUFT App
 -----------------
 
 Android app for configuring [Eduroam](http://eduroam.org) wifi network for users of [Universidade Federal do Tocantins](https://www.uft.edu.br) on Android 4.3 and up.
