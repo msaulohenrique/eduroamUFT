@@ -1,16 +1,16 @@
 HU Berlin eduroam
 -----------------
 
-Android app for configuring [Eduroam](http://eduroam.org) wifi network for users of [Humboldt University of Berlin](https://www.hu-berlin.de) on Android 4.3 and up.
+Android app for configuring [Eduroam](http://eduroam.org) wifi network for users of [Universidade Federal do Tocantins](https://www.uft.edu.br) on Android 4.3 and up.
 
-The app is based on [nikhef-eduroam](https://github.com/synnack/nikhef-eduroam) from Wilco Baan Hofman.
+The app is a copy on [@hu-berlin-cms/hu-eduroam](https://github.com/hu-berlin-cms/hu-eduroam).
 
 [<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
      alt="Get it on Google Play"
-     height="80">](https://play.google.com/store/apps/details?id=de.hu_berlin.eduroam)
+     height="80">](https://play.google.com/store/apps/details?id=#)
 [<img src="https://f-droid.org/badge/get-it-on.png"
      alt="Get it on F-Droid"
-     height="80">](https://f-droid.org/packages/de.hu_berlin.eduroam/)
+     height="80">](https://f-droid.org/packages/#/)
 
 ## License
 
